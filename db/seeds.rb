@@ -3,8 +3,8 @@ User.create!(name:  "Example User",
              password:              "foobar",
              password_confirmation: "foobar",
              admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
+             activated: true, # アカウント有効化済み
+             activated_at: Time.zone.now) # サーバーのタイムゾーンに応じたタイムスタンプを返す
 
 99.times do |n|
   name  = Faker::Name.name

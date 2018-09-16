@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token, :activation_token
-  before_save   :downcase_email
-  before_create :create_activation_digest
+  attr_accessor :remember_token, :activation_token # activation_token属性の追加
+  before_save   :downcase_email # メソッド参照に切り替え
+  before_create :create_activation_digest # create_activation_digestメソッド
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
@@ -42,25 +42,26 @@ class User < ApplicationRecord
   
   # アカウントを有効にする
   def activate
-    update_attribute(:activated,    true)
-    update_attribute(:activated_at, Time.zone.now)
+    update_columns(activated: true, activated_at: Time.zone.now)
+    # update_attribute(:activated,    true)
+    # update_attribute(:activated_at, Time.zone.now)
   end
 
   # 有効化用のメールを送信する
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
-  
+
   private
 
     # メールアドレスをすべて小文字にする
-  def downcase_email
-    self.email = email.downcase
-  end
+    def downcase_email
+      self.email = email.downcase
+    end
 
-  # 有効化トークンとダイジェストを作成および代入する
-  def create_activation_digest
-    self.activation_token  = User.new_token
-    self.activation_digest = User.digest(activation_token)
-  end
+    # 有効化トークンとダイジェストを作成および代入する
+    def create_activation_digest
+      self.activation_token  = User.new_token
+      self.activation_digest = User.digest(activation_token)
+    end
 end
