@@ -290,3 +290,20 @@ span.picture {
     border: 0;
   }
 }
+
+/* 検索機能＿https://qiita.com/YN6127yn/items/fca9efa22536b8b2a9efを参照*/
+
+.search_form {
+  overflow: auto;
+  margin: 10px;
+  float: right;
+  .input-group {
+    width: 300px;
+    .form-control {
+      width: 250px;
+    }
+    .btn {
+      width: 50px;
+    }
+  }
+}
