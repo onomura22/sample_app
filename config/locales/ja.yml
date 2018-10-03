@@ -1,5 +1,6 @@
 ---
 ja:
+
   activerecord:
     errors:
       messages:
@@ -212,3 +213,8 @@ ja:
     age: 年齢
 
   site_title: サイトのタイトル
+  
+  will_paginate:
+      previous_label: "&#8592; 前"
+      next_label: "次 &#8594;"
+      page_gap: "&hellip;"

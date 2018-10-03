@@ -4,8 +4,8 @@
     <section class="user_info">
       <%= gravatar_for @user %>
       <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
+      <span><%= link_to "マイプロフィール", @user %></span>
+      <span><b>コメント数:</b> <%= @user.microposts.count %>件</span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
