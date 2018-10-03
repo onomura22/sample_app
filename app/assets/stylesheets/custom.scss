@@ -14,7 +14,13 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 120px;
+  background-image: url(main.png); //画像指定
+  background-position: center center; //画面中央に表示
+  background-repeat: no-repeat; //画像を繰り返し表示しない
+  background-attachment: fixed; //画像の位置が固定され、スクロールしても動かない
+  background-size: cover; //縦横比は保持して、背景領域を完全に覆うように背景画像を拡大縮小する
+  
 }
 
 section {
@@ -29,6 +35,12 @@ textarea {
   text-align: center;
   h1 {
     margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 1px #000, //文字枠太さ・色
+             -2px 2px 1px #000,
+             2px -2px 1px #000,
+             -2px -2px 1px #000;
+    letter-spacing: 0.05em; //文字間隔
   }
 }
 
@@ -43,6 +55,11 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px #000, //文字枠太さ・色
+             -1px 1px 1px #000,
+             1px -1px 1px #000,
+             -1px -1px 1px #000;
 }
 
 h2 {
@@ -55,8 +72,9 @@ h2 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.4em;
   line-height: 1.7em;
+  color: white;
 }
 
 
@@ -72,7 +90,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #FFD700;
     text-decoration: none;
   }
 }
@@ -83,13 +101,13 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  color: white;
   
   a {
-    color: #555;
+    color: white;
   }
   a:hover {
-    color: #222;
+    color: #FFD700;
   }
   small {
     float: left;
@@ -260,6 +278,7 @@ input {
   .content {
     display: block;
     margin-left: 60px;
+    color: white;
     img {
       display: block;
       padding: 5px 0;
