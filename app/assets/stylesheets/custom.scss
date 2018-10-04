@@ -11,16 +11,16 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+
 /* universal */
 
 body {
   padding-top: 120px;
-  background-image: url(main.png); //画像指定
+  background-image: url(main01.png); //画像指定
   background-position: center center; //画面中央に表示
   background-repeat: no-repeat; //画像を繰り返し表示しない
   background-attachment: fixed; //画像の位置が固定され、スクロールしても動かない
   background-size: cover; //縦横比は保持して、背景領域を完全に覆うように背景画像を拡大縮小する
-  
 }
 
 section {
@@ -44,6 +44,16 @@ textarea {
   }
 }
 
+.jumbotron {
+  background: none; //タイトル背景の透明化（表示しない）
+}
+
+.font_head_color{
+  color: gold;
+}
+
+
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,7 +73,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.8em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -77,8 +87,22 @@ p {
   color: white;
 }
 
+h3{
+    font-size: 1.2em;
+  line-height: 1.7em;
+  color: white;
+}
 
 /* header */
+
+#header {
+  background-color: rgba(0,0,0,0.5);
+  height: 70px;
+}
+
+#header_element {
+  
+}
 
 #logo {
   float: left;
@@ -88,9 +112,17 @@ p {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  font-weight: 850;
   &:hover {
-    color: #FFD700;
+    color: gold;
+    text-decoration: none;
+  }
+}
+
+#menu{
+  color: white;
+  &:hover {
+    color: gold;
     text-decoration: none;
   }
 }
@@ -99,7 +131,7 @@ p {
 
 footer {
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 15px;
   border-top: 1px solid #eaeaea;
   color: white;
   
@@ -178,14 +210,14 @@ aside {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
-    color: gray;
+    color: white;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: gold;
     }
   }
   strong {
@@ -309,9 +341,6 @@ span.picture {
   }
 }
 
-.jumbotron {
-  background: none; //タイトル背景の透明化（表示しない）
-}
 
 /* 検索機能＿https://qiita.com/YN6127yn/items/fca9efa22536b8b2a9efを参照*/
 
