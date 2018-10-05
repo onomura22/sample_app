@@ -16,11 +16,6 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 120px;
-  background-image: image-url("main01.png"); //画像指定
-  background-position: center center; //画面中央に表示
-  background-repeat: no-repeat; //画像を繰り返し表示しない
-  background-attachment: fixed; //画像の位置が固定され、スクロールしても動かない
-  background-size: cover; //縦横比は保持して、背景領域を完全に覆うように背景画像を拡大縮小する
 }
 
 section {
@@ -105,14 +100,8 @@ p {
 
 /* header */
 
-#header {
+.navbar-fixed-top {
   background-color: rgba(0,0,0,0.5);
-  height: 60px;
-  border-color: none;
-}
-
-#header_element {
-
 }
 
 #logo {
@@ -123,11 +112,10 @@ p {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: 850;
+  font-weight: bold;
   &:hover {
     color: gold;
     text-decoration: none;
-    line-height:200%;
   }
 }
 
@@ -136,7 +124,6 @@ p {
   &:hover {
     color: gold;
     text-decoration: none;
-    line-height:200%;
   }
 }
 
@@ -145,7 +132,6 @@ p {
   &:hover {
     color: gold;
     background-color: rgba(0,0,0,0.5);
-    text-decoration: none;
   }
 }
 
@@ -268,6 +254,10 @@ aside {
   padding: 0;
 }
 
+.field{
+  color: black;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -382,6 +372,15 @@ span.picture {
   line-height: 1em;
   margin-top: 10px;
   margin-bottom: 75px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+body {
+  background-image: image-url("main01.png"); //画像指定
+  background-position: center center; //画面中央に表示
+  background-repeat: no-repeat; //画像を繰り返し表示しない
+  background-attachment: fixed; //画像の位置が固定され、スクロールしても動かない
+  background-size: cover; //縦横比は保持して、背景領域を完全に覆うように背景画像を拡大縮小する
 }
 
 
