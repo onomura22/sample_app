@@ -16,7 +16,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 120px;
-  background-image: url(main01.png); //画像指定
+  background-image: image-url("main01.png"); //画像指定
   background-position: center center; //画面中央に表示
   background-repeat: no-repeat; //画像を繰り返し表示しない
   background-attachment: fixed; //画像の位置が固定され、スクロールしても動かない
