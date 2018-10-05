@@ -1,10 +1,20 @@
-<% provide(:title, "About") %>
-<h1>About</h1>
-<p>
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  is a <a href="https://railstutorial.jp/#ebook">book</a> and
-  <a href="https://railstutorial.jp/#screencast">screencast</a>
-  to teach web development with
-  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
-  This is the sample application for the tutorial.
-</p>
+<% provide(:title, "リンク集") %>
+
+
+<h1>サッカー情報サイト</h1>
+  <left>
+    <p class="cole">サッカーキング</p>
+    <%= link_to image_tag("soccerking.png", :size =>'180x180', alt: "サッカーキング"),
+        'https://www.soccer-king.jp/', :target=>["_blank"]%>
+    <p class="commentary">情報量も多く、世界のサッカー情報からJリーグまで、独自の視点でコラム掲載されています！</p>
+  
+    <p class="cole">Goal.com</p>
+    <%= link_to image_tag("GOAL.jpg", :size =>'180x180', alt: "Goal.com"),
+        'http://www.goal.com/jp/', :target=>["_blank"]%>
+    <p class="commentary">海外サッカー情報を掲載する大手サイトです！海外サッカーの情報は網羅できます！</p>
+    
+    <p class="cole">Number Web</p>
+    <%= link_to image_tag("numberweb.png", :size =>'180x180', alt: "Number Web"),
+        'http://number.bunshun.jp/', :target=>["_blank"]%>
+    <p class="commentary">雑誌「Number」を出版する会社のウェブです！雑誌とは違ったコラムも掲載しています！</p>
+  

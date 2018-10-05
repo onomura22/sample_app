@@ -6,8 +6,8 @@
         <li><%= link_to "ホーム", root_path, id: "menu"%></li>
         <li><%= link_to "ヘルプ", help_path, id: "menu"%></li>
         <% if logged_in? %>
+          <li><%= link_to "おすすめリンク集", about_path, id: "menu"%></li>
           <li><%= link_to "ユーザー一覧", users_path, id: "menu"%></li>
-          <li><%= link_to "情報サイト集", link_path, id: "menu"%></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown", id="menu">
               アカウント <b class="caret"></b>

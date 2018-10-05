@@ -52,6 +52,20 @@ textarea {
   color: gold;
 }
 
+.btn-primary { //ボタン全般へ
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border-color: white;
+  &:hover {
+    color: gold;
+    background-color: rgba(0,0,0,0.5);
+    border-color: gold;
+    text-decoration: none;
+  }
+}
+
+element.style
+
 
 
 /* typography */
@@ -62,14 +76,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   color: white;
-  text-shadow: 1px 1px 1px #000, //文字枠太さ・色
-             -1px 1px 1px #000,
-             1px -1px 1px #000,
-             -1px -1px 1px #000;
+  text-shadow: 2px 2px 2px #000, //文字枠太さ・色
+             -1px 2px 2px #000,
+             2px -1px 2px #000,
+             -1px -1px 2px #000;
 }
 
 h2 {
@@ -81,14 +95,14 @@ h2 {
   color: white;
 }
 
-p {
-  font-size: 1.4em;
+h3{
+  font-size: 1.2em;
   line-height: 1.7em;
   color: white;
 }
 
-h3{
-    font-size: 1.2em;
+p {
+  font-size: 1.4em;
   line-height: 1.7em;
   color: white;
 }
@@ -97,11 +111,11 @@ h3{
 
 #header {
   background-color: rgba(0,0,0,0.5);
-  height: 70px;
+  height: 60px;
 }
 
 #header_element {
-  
+
 }
 
 #logo {
@@ -116,6 +130,7 @@ h3{
   &:hover {
     color: gold;
     text-decoration: none;
+    line-height:200%;
   }
 }
 
@@ -124,6 +139,7 @@ h3{
   &:hover {
     color: gold;
     text-decoration: none;
+    line-height:200%;
   }
 }
 
@@ -139,7 +155,7 @@ footer {
     color: white;
   }
   a:hover {
-    color: #FFD700;
+    color: gold;
   }
   small {
     float: left;
@@ -341,10 +357,25 @@ span.picture {
   }
 }
 
+/* Link page */
+
+.cole {
+  font-size: 2em;
+  line-height: 1.2em;
+  color: gold;
+}
+
+.commentary {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
 
 /* 検索機能＿https://qiita.com/YN6127yn/items/fca9efa22536b8b2a9efを参照*/
 
 .search_form {
+  color: white;
   overflow: auto;
   margin: 10px;
   float: right;
@@ -354,7 +385,7 @@ span.picture {
       width: 250px;
     }
     .btn {
-      width: 50px;
+      width: 70px;
     }
   }
 }
