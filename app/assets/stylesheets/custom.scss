@@ -64,10 +64,6 @@ textarea {
   }
 }
 
-element.style
-
-
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,6 +108,7 @@ p {
 #header {
   background-color: rgba(0,0,0,0.5);
   height: 60px;
+  border-color: none;
 }
 
 #header_element {
@@ -143,10 +140,25 @@ p {
   }
 }
 
+#menu2{
+  color: white;
+  &:hover {
+    color: gold;
+    background-color: rgba(0,0,0,0.5);
+    text-decoration: none;
+  }
+}
+
+.dropdown-menu{
+  background-color: rgba(0,0,0,0.5);
+  border-color: none;
+}
+
+
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 70px;
   padding-top: 15px;
   border-top: 1px solid #eaeaea;
   color: white;
@@ -366,11 +378,12 @@ span.picture {
 }
 
 .commentary {
-  font-size: 1.5em;
-  line-height: 1.2em;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  font-size: 1.2em;
+  line-height: 1em;
+  margin-top: 10px;
+  margin-bottom: 75px;
 }
+
 
 /* 検索機能＿https://qiita.com/YN6127yn/items/fca9efa22536b8b2a9efを参照*/
 
