@@ -144,8 +144,8 @@ p {
 /* footer */
 
 footer {
-  margin-top: 70px;
-  padding-top: 15px;
+  margin-top: 250px;
+  padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: white;
   
@@ -364,6 +364,7 @@ span.picture {
 .cole {
   font-size: 2em;
   line-height: 1.2em;
+  margin-top: 100px;
   color: gold;
 }
 
@@ -371,9 +372,14 @@ span.picture {
   font-size: 1.2em;
   line-height: 1em;
   margin-top: 10px;
-  margin-bottom: 75px;
-  background-color: rgba(0,0,0,0.5);
+  margin-bottom: -10px;
 }
+
+hr {
+  background-color: #FF0;
+	border-top: 2px dashed #000;
+}
+
 
 body {
   background-image: image-url("main01.png"); //画像指定
