@@ -35,6 +35,7 @@ textarea {
              -2px 2px 1px #000,
              2px -2px 1px #000,
              -2px -2px 1px #000;
+    background-color: rgba(0,0,0,0.5);
     letter-spacing: 0.05em; //文字間隔
   }
 }
@@ -198,9 +199,9 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
+      font-size: 1.8em;
       text-align: left;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
       margin-bottom: 3px;
       margin-top: 0px;
     }
@@ -319,10 +320,10 @@ input {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 2px solid rgba(255,255,255,0.5);
   }
   .user {
-    margin-top: 5em;
+    margin-top: 10em;
     padding-top: 0;
   }
   .content {
@@ -357,6 +358,10 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.row {
+  color: white;
 }
 
 /* Link page */
