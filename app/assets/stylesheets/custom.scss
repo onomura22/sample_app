@@ -47,11 +47,11 @@ textarea {
   color: gold;
 }
 
-.btn-primary { //ボタン全般へ
+.btn { //ボタン全般へ
   color: white;
   background-color: rgba(0,0,0,0.5);
   border-color: white;
-  &:hover {
+  &:hover { 
     color: gold;
     background-color: rgba(0,0,0,0.5);
     border-color: gold;
