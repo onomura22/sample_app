@@ -7,6 +7,8 @@
   </div>
 </div>
 
+<%= will_paginate %>
+
 <% unless @users.empty? %>
   <ul class="users">
     <%= render @users %>
@@ -17,3 +19,5 @@
     もう一度確認して、検索してください。
   </p>
 <% end %>
+
+<%= will_paginate %>
