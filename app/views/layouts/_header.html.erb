@@ -1,10 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container" id="header_element">
+  <div class="container">
     <%= link_to "FOOTBALL.com", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "ホーム", root_path, id: "menu"%></li>
         <li><%= link_to "このサイトについて", help_path, id: "menu"%></li>
+        <li><%= link_to "お問い合わせ", contact_path, id: "menu"%></li>
         <% if logged_in? %>
           <li><%= link_to "おすすめリンク集", link_path, id: "menu"%></li>
           <li><%= link_to "ユーザー一覧", users_path, id: "menu"%></li>

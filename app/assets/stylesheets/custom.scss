@@ -149,11 +149,16 @@ p {
 
 /* footer */
 
+.navbar-fixed-bottom {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
 footer {
   margin-top: 250px;
-  padding-top: 5px;
+  padding-top: 15px;
   border-top: 1px solid #eaeaea;
-  color: white;
+  color: white
   
   a {
     color: white;
@@ -172,7 +177,65 @@ footer {
     float: left;
     margin-left: 15px;
   }
-  
+}
+
+/* シェアボタン*/
+
+.facebook {
+  background-color: #305097;
+  border: 2px solid #305097;
+  border-radius: 2px;
+  color: #fff;
+  padding:4px 23px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  width: 32px;
+}
+.facebook:hover {
+  background-color: #fff;
+  color: #305097;
+}
+.facebook:focus {
+    color: #fff;
+    background-color: #305097;
+}
+
+.twitter {
+  background-color: #55acee;
+  border: 2px solid #55acee;
+  border-radius: 2px;
+  color: #fff;
+  padding:4px 32px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  width: 32px;
+}
+.twitter:hover {
+  background-color: #fff;
+  color: #55acee;
+}
+.twitter:focus {
+    color: #fff;
+    background-color: #55acee;
+}
+
+.line {
+  background-color: #5ae628;
+  border: 2px solid #5ae628;
+  border-radius: 2px;
+  color: #fff;
+  padding:4px 32px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  width: 32px;
+}
+.line:hover {
+  background-color: #fff;
+  color: #5ae628;
+}
+.line:focus {
+    color: #fff;
+    background-color: #5ae628;
 }
 
 /* miscellaneous */
