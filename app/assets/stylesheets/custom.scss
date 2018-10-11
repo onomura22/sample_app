@@ -57,6 +57,11 @@ textarea {
     border-color: gold;
     text-decoration: none;
   }
+  &:focus {
+    color: gold;
+    background-color: rgba(0,0,0,0.5);
+    
+  }
 }
 
 /* typography */
