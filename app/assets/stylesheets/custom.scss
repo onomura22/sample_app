@@ -22,6 +22,13 @@ section {
   overflow: auto;
 }
 
+
+hr {
+	border-top: 2px dashed rgba(255,255,255,0.5);
+	margin-bottom :8px;
+}
+
+
 textarea {
   resize: vertical;
 }
@@ -71,11 +78,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -1px;
+  font-size: 3.5em;
+  letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
   color: white;
+  font-family: 'Superclarendon','Segoe UI Black','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
   text-shadow: 2px 2px 2px #000, //文字枠太さ・色
              -1px 2px 2px #000,
              2px -1px 2px #000,
@@ -83,8 +91,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em;
-  letter-spacing: -1px;
+  font-size: 1.5em;
+  letter-spacing: -1.5px;
+  margin-top: 0px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -118,6 +127,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  font-family: 'Superclarendon','Segoe UI Black','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
   &:hover {
     color: gold;
     text-decoration: none;
@@ -435,10 +445,18 @@ span.picture {
 /* Link page */
 
 .cole {
-  font-size: 2em;
+  font-size: 2.7em;
   line-height: 1.2em;
+  letter-spacing: 0.5px;
   margin-top: 100px;
   color: gold;
+  font-family: 'Impact','Verdana',sans-serif;
+}
+
+.cole2 {
+  font-size: 1em;
+  color: gold;
+  margin-top: -1em;
 }
 
 .commentary {
@@ -447,11 +465,6 @@ span.picture {
   margin-top: 10px;
   margin-bottom: -10px;
 }
-
-hr {
-	border-top: 2px dashed #000;
-}
-
 
 body {
   background-image: image-url("main01.png"); //画像指定
