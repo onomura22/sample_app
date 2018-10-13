@@ -38,11 +38,12 @@ textarea {
   h1 {
     margin-bottom: 10px;
     color: white;
+    font-family: 'Superclarendon','Segoe UI Black',sans-serif;
     text-shadow: 2px 2px 1px #000, //文字枠太さ・色
              -2px 2px 1px #000,
              2px -2px 1px #000,
              -2px -2px 1px #000;
-    letter-spacing: 0.05em; //文字間隔
+    letter-spacing: 0em; //文字間隔
   }
 }
 
@@ -84,10 +85,6 @@ h1 {
   text-align: center;
   color: white;
   font-family: 'Superclarendon','Segoe UI Black','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
-  text-shadow: 2px 2px 2px #000, //文字枠太さ・色
-             -1px 2px 2px #000,
-             2px -1px 2px #000,
-             -1px -1px 2px #000;
 }
 
 h2 {
