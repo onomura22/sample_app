@@ -1,5 +1,5 @@
 こんにちは！ <%= @user.name %>　さん
 
-FOOTBALL．com へようこそ！下記のリンクをクリックしてアカウントを有効化してください
+FOOTBALL．com へようこそ！下記のリンクをクリックして、アカウントを有効化してください
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
