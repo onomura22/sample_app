@@ -1,24 +1,54 @@
 <% provide(:title, @user.name) %>
-<div class="row" style = color:white>
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-      <h3>コメント数 <%= @user.microposts.count %>件</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-  </div>
-</div>
+<table class="table table-bordered table-striped table-condensed">
+  
+<thead>
+  <tr>
+    <th class="tg-0pky">日付　時間管理表</th>
+    <th class="tg-0lax">指定勤務時間</th>
+    <th class="tg-0lax" colspan="3">基本時間</th>
+    <th class="tg-0lax">初日</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">所属</td>
+    <td class="tg-0lax">氏名</td>
+    <td class="tg-0lax">コード</td>
+    <td class="tg-0lax">0000</td>
+    <td class="tg-0lax">出勤日数</td>
+    <td class="tg-0lax">締め</td>
+  </tr>
+</table>
+</thead>
+
+<p><%= link_to "勤怠を編集", login_path, class: "btn btn-lg btn-primary"%></p>
+
+<table class="table table-bordered table-striped table-condensed">
+
+  <tr>
+    <th class="tg-s268" rowspan="2">日付</th>
+    <th class="tg-s268" rowspan="2">曜日</th>
+    <th class="tg-s268" colspan="3">出社</th>
+    <th class="tg-0lax" colspan="3">退社</th>
+    <th class="tg-0lax" rowspan="2">在社時間</th>
+    <th class="tg-0lax" rowspan="2">備考</th>
+  </tr>
+  <tr>
+    <td class="tg-s268">時</td>
+    <td class="tg-0lax">分</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">時</td>
+    <td class="tg-0lax">分</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+</table>
