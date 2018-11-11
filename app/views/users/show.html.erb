@@ -10,7 +10,7 @@
   </tr>
   <tr>
     <td class="tg-0lax">所属</td>
-    <td class="tg-0lax">氏名</td>
+    <td class="tg-0lax">氏名 <%= @user.name %></td>
     <td class="tg-0lax">コード</td>
     <td class="tg-0lax">0000</td>
     <td class="tg-0lax">出勤日数</td>
@@ -20,6 +20,7 @@
 </thead>
 
 <p><%= link_to "勤怠を編集", login_path, class: "btn btn-lg btn-primary"%></p>
+
 
 <table class="table table-bordered table-striped table-condensed">
 

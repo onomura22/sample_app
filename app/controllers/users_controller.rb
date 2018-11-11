@@ -3,7 +3,7 @@ class UsersController < ApplicationController
                                         :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
-  
+
   def index
     if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
       @q = User.ransack(search_params, activated_true: true)
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @youbi = %[日 月 火 水 木 金 土]
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
   end
@@ -27,9 +28,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-    #@user.send_activation_email
-    #  flash[:info] = "メールを確認して、アカウントを認証してください。"
-    #redirect_to root_url
+    # @user.send_activation_email
+    #   flash[:info] = "メールを確認して、アカウントを認証してください。"
+    # redirect_to root_url
     else
       render 'new'
     end
