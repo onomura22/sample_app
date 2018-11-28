@@ -52,9 +52,9 @@
     <% (@start_date..@end_date).each do |days| %>
     <tr>
       <!--１項目、日付-->
-      <td class="tg-0lax"><%= @date %></td>
+      <td class="tg-0lax">  <%= days.day.month %>/<%= days.day.day %>  </td>
       <!--２項目、曜日-->
-      <td class="tg-0lax"><%= @youbi %></td>
+      <td class="tg-0lax"><%= @date[days.day.wday] %></td>
       <td class="tg-0lax"></td>
       <td class="tg-0lax"></td>
       <td class="tg-0lax"></td>

@@ -16,11 +16,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @youbi = %[日 月 火 水 木 金 土]
+    @youbi = %w[日 月 火 水 木 金 土]
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
     @date = Date.today
-    @start_date =  Date.new(Date.today.year,Date.today.month)
+    @start_date =  Date.new(Date.today.year,Date.today.month, 1)
     @end_date = @start_date.end_of_month
   end
 
