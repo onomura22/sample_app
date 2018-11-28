@@ -19,6 +19,9 @@ class UsersController < ApplicationController
     @youbi = %[日 月 火 水 木 金 土]
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    @date = Date.today
+    @start_date =  Date.new(Date.today.year,Date.today.month)
+    @end_date = @start_date.end_of_month
   end
 
   def new
@@ -76,7 +79,7 @@ class UsersController < ApplicationController
     end
   
     def user_params
-      params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:name, :email, :department,:password,
                                    :password_confirmation)
     end
 

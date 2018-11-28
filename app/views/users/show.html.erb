@@ -2,54 +2,68 @@
 <table class="table table-bordered table-striped table-condensed">
   
 <thead>
+  <!--1列目-->
   <tr>
     <th class="tg-0pky">日付　時間管理表</th>
     <th class="tg-0lax">指定勤務時間</th>
     <th class="tg-0lax" colspan="3">基本時間</th>
-    <th class="tg-0lax">初日</th>
+    <th class="tg-0lax">初日 <%= @start_date %></th>
   </tr>
+  <!--2列目-->
   <tr>
-    <td class="tg-0lax">所属</td>
+    <td class="tg-0lax">所属 <%= @user.department %></td>
     <td class="tg-0lax">氏名 <%= @user.name %></td>
     <td class="tg-0lax">コード</td>
     <td class="tg-0lax">0000</td>
     <td class="tg-0lax">出勤日数</td>
-    <td class="tg-0lax">締め</td>
+    <td class="tg-0lax">締め <%= @end_date %></td>
   </tr>
 </table>
 </thead>
 
 <p><%= link_to "勤怠を編集", login_path, class: "btn btn-lg btn-primary"%></p>
 
-
+<!--勤怠情報表示テーブル-->
 <table class="table table-bordered table-striped table-condensed">
-
-  <tr>
-    <th class="tg-s268" rowspan="2">日付</th>
-    <th class="tg-s268" rowspan="2">曜日</th>
-    <th class="tg-s268" colspan="3">出社</th>
-    <th class="tg-0lax" colspan="3">退社</th>
-    <th class="tg-0lax" rowspan="2">在社時間</th>
-    <th class="tg-0lax" rowspan="2">備考</th>
-  </tr>
-  <tr>
-    <td class="tg-s268">時</td>
-    <td class="tg-0lax">分</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">時</td>
-    <td class="tg-0lax">分</td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-  </tr>
+  <!--勤怠情報表紙ヘッダー-->
+  <thead>
+    <!--１列目-->
+    <tr>
+      <th class="tg-s268" rowspan="2">日付</th>
+      <th class="tg-s268" rowspan="2">曜日</th>
+      <th class="tg-s268" colspan="3">出社</th>
+      <th class="tg-0lax" colspan="3">退社</th>
+      <th class="tg-0lax" rowspan="2">在社時間</th>
+      <th class="tg-0lax" rowspan="2">備考</th>
+    </tr>
+    <!--２列目-->
+    <tr>
+      <td class="tg-s268">時</td>
+      <td class="tg-0lax">分</td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax">時</td>
+      <td class="tg-0lax">分</td>
+      <td class="tg-0lax"></td>
+    </tr>
+  </thead>
+      
+  <!--勤怠情報表示日付部分-->
+  <tbody>
+    <% (@start_date..@end_date).each do |days| %>
+    <tr>
+      <!--１項目、日付-->
+      <td class="tg-0lax"><%= @date %></td>
+      <!--２項目、曜日-->
+      <td class="tg-0lax"><%= @youbi %></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
