@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @youbi = %w[日 月 火 水 木 金 土]
+    @youbi = ["日", "月", "火" ,"水" ,"木" ,"金" ,"土"]
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
     @date = Date.today
