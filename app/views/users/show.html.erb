@@ -52,13 +52,19 @@
     <% (@start_date..@end_date).each do |days| %>
     <tr>
       <!--１項目、日付-->
-      <td class="tg-0lax"> <%= days.month %>/<%= days.day %> </td>
+      <td class="tg-0lax">
+         <%= days.month %>/<%= days.day %> 
+      </td>
       <!--２項目、曜日-->
-      <td class="tg-0lax"> <%= @youbi[days.wday] %></td>
+      <td class="tg-0lax"> 
+        <%= @youbi[days.wday] %>
+      </td>
+      <!--３項目、出社・hour-->
       <td class="tg-0lax"></td>
+      <!--４項目、出社・min-->
       <td class="tg-0lax"></td>
-      <!--５項：出社ボタン表示（当日かつ出社時間が存在しない場合）-->
-      <td class="tg-0lax"></td>
+      <!--５項目：出社ボタン表示（当日かつ出社時間が存在しない場合）-->
+      <td class="tg-0lax"><%= link_to "出社", login_path, class: "btn"%></td>
       <td class="tg-0lax"></td>
       <td class="tg-0lax"></td>
       <td class="tg-0lax"></td>
